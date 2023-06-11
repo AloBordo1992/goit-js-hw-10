@@ -1,6 +1,6 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
 
-// Функція для заповнення селекту зі списком порід
+
 function populateBreedSelect(breeds) {
   const breedSelect = document.querySelector('.breed-select');
 
@@ -12,7 +12,6 @@ function populateBreedSelect(breeds) {
   });
 }
 
-// Функція для відображення інформації про кота
 function showCatInfo(cat) {
   const catInfoDiv = document.querySelector('.cat-info');
   catInfoDiv.innerHTML = '';
@@ -40,7 +39,6 @@ function showCatInfo(cat) {
   breedSelect.style.display = 'block';
 }
 
-// Отримання списку порід при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', () => {
   const breedSelect = document.querySelector('select.breed-select');
   const loaderElement = document.querySelector('p.loader');
@@ -66,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Обробник події зміни вибраної опції у селекті порід
 const breedSelect = document.querySelector('select.breed-select');
 breedSelect.addEventListener('change', () => {
   const selectedBreedId = breedSelect.value;
